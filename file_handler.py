@@ -1,11 +1,8 @@
 def read_file(path):
-    f = open(path, "r", encoding="utf-8")
-    content = f.read()
-    f.close()
-    return content
+    with open(path, "r", encoding="utf-8") as f:
+        return f.read()
 
 
 def write_file(path, content):
-    f = open(path, "w", encoding="utf-8")
-    f.write(content)
-    f.close()
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(content)
